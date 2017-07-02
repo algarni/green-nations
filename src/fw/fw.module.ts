@@ -4,6 +4,9 @@ import { FrameworkBodyComponent } from "fw/framework-body/framework-body.compone
 import { ContentComponent } from "fw/content/content.component";
 import { TitleBarComponent } from "fw/title-bar/title-bar.component";
 import { FrameworkConfigService } from "fw/services/framework-config.service";
+import { TopBarComponent } from "fw/top-bar/top-bar.component";
+import { StatusBarComponent } from "fw/status-bar/status-bar.component";
+import { ScreenService } from "fw/services/screen.service";
 
 @NgModule({
   imports: [
@@ -12,10 +15,13 @@ import { FrameworkConfigService } from "fw/services/framework-config.service";
   declarations: [
     FrameworkBodyComponent,
     ContentComponent,
-    TitleBarComponent
+    TitleBarComponent,
+    TopBarComponent,
+    StatusBarComponent
   ],
   providers: [
-    FrameworkConfigService
+    FrameworkConfigService,
+    ScreenService
   ],
   exports: [
     FrameworkBodyComponent
