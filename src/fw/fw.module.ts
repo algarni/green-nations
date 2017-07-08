@@ -7,24 +7,38 @@ import { FrameworkConfigService } from "fw/services/framework-config.service";
 import { TopBarComponent } from "fw/top-bar/top-bar.component";
 import { StatusBarComponent } from "fw/status-bar/status-bar.component";
 import { ScreenService } from "fw/services/screen.service";
+import { ScreenBelowLarge } from "fw/directives/screen-below-large.directive";
+import { ScreenLarge } from "fw/directives/screen-large.directive";
+import { MenuService } from "fw/services/menu.service";
+import { MenuComponent } from "fw/menus/menu/menu.component";
+import { MenuItemComponent } from "fw/menus/menu-item/menu-item.component";
+import { RouterModule } from "@angular/router";
+import { PopupMenuComponent } from "fw/menus/popup-menu/popup-menu.component";
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   declarations: [
     FrameworkBodyComponent,
     ContentComponent,
     TitleBarComponent,
     TopBarComponent,
-    StatusBarComponent
+    StatusBarComponent,
+    ScreenLarge,
+    ScreenBelowLarge,
+    MenuComponent,
+    MenuItemComponent,
+    PopupMenuComponent
   ],
   providers: [
     FrameworkConfigService,
-    ScreenService
+    ScreenService,
+    MenuService
   ],
   exports: [
-    FrameworkBodyComponent
+    FrameworkBodyComponent,
   ]
 })
 export class FwModule { }
