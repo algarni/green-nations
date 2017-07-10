@@ -11,7 +11,7 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     ) { }
 
     canActivate(): boolean{
-        console.log('AuthGuard#canActivate called ' + this.userService.isAuthenticated );
+        // console.log('AuthGuard#canActivate called ' + this.userService.isAuthenticated );
 
         if(!this.userService.isAuthenticated){
             console.log('not auth');

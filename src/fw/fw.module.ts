@@ -16,14 +16,17 @@ import { MenuItemComponent } from "fw/menus/menu-item/menu-item.component";
 import { RouterModule } from "@angular/router";
 import { PopupMenuComponent } from "fw/menus/popup-menu/popup-menu.component";
 import { SignInComponent } from "fw/users/sign-in/sign-in.component";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { DynamicFormComponent } from "fw/dynamic-forms/dynamic-form/dynamic-form.component";
+import { DynamicFieldComponent } from "fw/dynamic-forms/dynamic-field/dynamic-field.component";
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     FrameworkBodyComponent,
@@ -36,7 +39,9 @@ import { FormsModule } from "@angular/forms";
     MenuComponent,
     MenuItemComponent,
     PopupMenuComponent,
-    SignInComponent
+    SignInComponent,
+    DynamicFormComponent,
+    DynamicFieldComponent
   ],
   providers: [
     FrameworkConfigService,
@@ -45,6 +50,7 @@ import { FormsModule } from "@angular/forms";
   ],
   exports: [
     FrameworkBodyComponent,
+    DynamicFormComponent
   ]
 })
 export class FwModule { }

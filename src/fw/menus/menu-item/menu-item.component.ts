@@ -42,7 +42,8 @@ export class MenuItemComponent implements OnInit {
   ) { }
 
   checkActiveRoute(route: string) {
-    this.isActiveRoute = (route == '/' + this.item.route);
+    // this.isActiveRoute = (route == '/' + this.item.route);
+    this.isActiveRoute = (route ==  this.item.route);
   }
 
   ngOnInit() {
@@ -76,7 +77,8 @@ export class MenuItemComponent implements OnInit {
         this.el.nativeElement, 'dispatchEvent', [newEvent]
       );
 
-      this.router.navigate(['/' + this.item.route]);
+      // this.router.navigate(['/' + this.item.route]);
+      this.router.navigate([this.item.route]);
 
     }
   }
